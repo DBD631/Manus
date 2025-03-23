@@ -1,10 +1,132 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Test Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="js/gallery.js" defer></script>
 </head>
 <body>
-  <h1>Hello World</h1>
-  <p>This is a test page.</p>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Photo Gallery</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Welcome to My Photo Gallery</h2>
+                <p>A collection of my favorite photographs captured over the years.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="nature">Nature</button>
+                <button class="filter-btn" data-filter="urban">Urban</button>
+                <button class="filter-btn" data-filter="portrait">Portrait</button>
+            </div>
+            
+            <div class="gallery-grid">
+                <!-- Images will be dynamically loaded here -->
+                <!-- Placeholder images for demonstration -->
+                <div class="gallery-item" data-category="nature">
+                    <img src="images/placeholder-1.jpg" alt="Nature photo" loading="lazy">
+                    <div class="gallery-item-caption">
+                        <h3>Beautiful Landscape</h3>
+                        <p>Nature</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="urban">
+                    <img src="images/placeholder-2.jpg" alt="Urban photo" loading="lazy">
+                    <div class="gallery-item-caption">
+                        <h3>City Lights</h3>
+                        <p>Urban</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="portrait">
+                    <img src="images/placeholder-3.jpg" alt="Portrait photo" loading="lazy">
+                    <div class="gallery-item-caption">
+                        <h3>Portrait</h3>
+                        <p>Portrait</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="nature">
+                    <img src="images/placeholder-4.jpg" alt="Nature photo" loading="lazy">
+                    <div class="gallery-item-caption">
+                        <h3>Mountain View</h3>
+                        <p>Nature</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="urban">
+                    <img src="images/placeholder-5.jpg" alt="Urban photo" loading="lazy">
+                    <div class="gallery-item-caption">
+                        <h3>Street Photography</h3>
+                        <p>Urban</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="portrait">
+                    <img src="images/placeholder-6.jpg" alt="Portrait photo" loading="lazy">
+                    <div class="gallery-item-caption">
+                        <h3>Candid Shot</h3>
+                        <p>Portrait</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div class="lightbox-caption"></div>
+        <button class="lightbox-prev">&#10094;</button>
+        <button class="lightbox-next">&#10095;</button>
+    </div>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About</h2>
+            <div class="about-content">
+                <p>Welcome to my photo gallery! I'm passionate about photography and love capturing beautiful moments. This gallery showcases some of my favorite photographs from various categories.</p>
+                <p>Feel free to browse through the different categories and enjoy the visual journey. Click on any image to view it in full size.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="copyright">
+                    <p>&copy; 2025 Photo Gallery. All rights reserved.</p>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">Twitter</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
